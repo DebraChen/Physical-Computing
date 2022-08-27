@@ -1,0 +1,33 @@
+// C++ code
+//
+int animationSpeed = 0;
+int Button = 0;
+
+void setup()
+{
+  pinMode(12, OUTPUT);
+  pinMode(8, OUTPUT);
+  pinMode(5, OUTPUT);
+  pinMode(3, INPUT);
+}
+
+void loop()
+{
+  Button = digitalRead(3);
+  animationSpeed = 400;
+  delay(1); // Wait for 1 millisecond(s)
+  delay(animationSpeed); // Wait for animationSpeed millisecond(s)
+
+  analogWrite(3, 0);
+  
+  if ( Button == LOW ) {
+    digitalWrite(5, LOW);
+    digitalWrite(8, HIGH);
+    digitalWrite(12, LOW);
+  } else {
+    digitalWrite(5, HIGH);
+    digitalWrite(8, HIGH);
+    digitalWrite(12, HIGH);
+  }
+ 
+}
