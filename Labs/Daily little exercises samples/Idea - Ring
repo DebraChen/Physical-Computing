@@ -1,0 +1,22 @@
+/*
+Adafruit Arduino - Lesson 5. Serial Monitor
+*/
+
+
+
+void setup() 
+{
+
+  Serial.begin(9600);
+  
+
+}
+
+void loop() 
+{
+  Serial.println("hello ");
+  delay(1000);
+}
+
+
+

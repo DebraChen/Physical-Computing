@@ -1,0 +1,82 @@
+
+int LDR1 = A1;
+int LDR2 = A2;
+int LDR3 = A3;
+int LDR4 = A4;
+const int LED1 = 2;
+const int LED2 = 3;
+const int LED3 = 4;
+const int LED4 = 5;
+
+int sensorIn1 = A1; // thumb - speed 
+int sensorIn2 = A2; // pointer - meoldy
+int sensorIn3 = A3; // middle - direction
+int sensorIn4 = A4; // ring - random noteduration
+
+//Define variables
+int valSensorValue1 = 0;
+int valSensorValue2 = 0;
+int valSensorValue3 = 0;
+int valSensorValue4 = 0;
+
+
+
+void setup() {
+  // put your setup code here, to run once:
+Serial.begin(9600);
+
+    pinMode(LDR1,INPUT);
+    pinMode(LDR2,INPUT);
+    pinMode(LDR3,INPUT);
+    pinMode(LDR4,INPUT);
+
+    pinMode(LED1, OUTPUT);
+    pinMode(LED2, OUTPUT);
+    pinMode(LED3, OUTPUT);
+    pinMode(LED4, OUTPUT);
+
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+
+  //LDR Read
+  valSensorValue1 = analogRead(sensorIn1);
+  valSensorValue2 = analogRead(sensorIn2);
+  valSensorValue3 = analogRead(sensorIn3);
+  valSensorValue4 = analogRead(sensorIn4);
+
+  Serial.println(valSensorValue1);
+  Serial.println(valSensorValue2);
+  Serial.println(valSensorValue3);
+  Serial.println(valSensorValue4);
+
+  //LED Write
+  if(valSensorValue1 <1000){
+     digitalWrite(LED1, HIGH);
+    }else{
+     digitalWrite(LED1, LOW);
+      }
+     delay(10);
+
+ if(valSensorValue2 <1000){
+     digitalWrite(LED2, HIGH);
+    }else{
+     digitalWrite(LED2, LOW);
+      }
+  delay(10);
+
+   if(valSensorValue3 <1000){
+     digitalWrite(LED3, HIGH);
+    }else{
+     digitalWrite(LED3, LOW);
+      }
+  delay(10);
+
+   if(valSensorValue4 <1000){
+     digitalWrite(LED4, HIGH);
+    }else{
+     digitalWrite(LED4, LOW);
+      }
+  delay(10);
+}
