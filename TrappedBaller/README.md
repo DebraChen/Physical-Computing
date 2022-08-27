@@ -13,7 +13,7 @@
 https://yuweichen01.wixsite.com/debra-chen/projects-6
 
 ### Github:
-https://git.arts.ac.uk/21014257/Physical-coding/tree/master/TrappedBaller%20-%202021%20Final%20Project
+https://github.com/DebraChen/Physical-Computing/tree/main/TrappedBaller
 
 ### Tinkercad:
 https://www.tinkercad.com/things/aDDqx2VeurU-brave-uusam/editel
